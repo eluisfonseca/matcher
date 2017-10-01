@@ -1,0 +1,22 @@
+{
+  "players":[
+    {
+      " id": "1",
+      "firstName": "John",
+      "lastName": "Rambo",
+      "stats": {
+        "pass": 4,
+        "marking": 6,
+        "handling": 9,
+        "shot": 5,
+        "speed": 3,
+        "endurance": 10,
+        "strength": 8,
+        "vision": 5,
+        "goalkeeping": 7,
+        "tackle": 9,
+        "focus": 4
+      }
+    }
+  ]
+}

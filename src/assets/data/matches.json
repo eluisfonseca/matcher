@@ -1,0 +1,19 @@
+{
+  "matches":[
+    {
+      "id":1,
+      "date": "13/10/2017",
+      "teamA":[2,3,5],
+      "teamB":[1,4,6],
+      "totalSkillA": 123,
+      "totalSkillB": 117,
+      "offenceSkillA": 56,
+      "offenceSkillB": 36,
+      "defenceSkillA": 25,
+      "defenceSkillB": 48,
+      "goalkeepingSkillA": 42,
+      "goalkeepingSkillB": 55,    
+      "score":[3,1]
+    }
+  ] 
+}

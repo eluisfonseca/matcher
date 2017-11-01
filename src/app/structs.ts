@@ -27,3 +27,19 @@ export interface AgregatedStats {
     physique: number;
     mental: number;
 }
+
+export interface Match {
+    id: number;
+    date: string;
+    teamA: number[];
+    teamB:  number[];
+    totalSkillA: number;
+    totalSkillB: number;
+    offenceSkillA: number;
+    offenceSkillB: number;
+    defenceSkillA: number;
+    defenceSkillB: number;
+    goalkeepingSkillA: number;
+    goalkeepingSkillB: number;
+    score: number[];
+}

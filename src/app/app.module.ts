@@ -5,6 +5,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
 import { PlayersService } from './services/players.service';
+import { MatchesService } from './services/matches.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PlayersService } from './services/players.service';
     MaterializeModule,
     HttpModule
   ],
-  providers: [PlayersService],
+  providers: [PlayersService, MatchesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

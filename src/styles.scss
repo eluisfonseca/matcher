@@ -1,17 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'assets/scss/colors';
+@import 'assets/styles/colors';
+@import 'assets/styles/typography';
 
 body {
   background-color: $primary;
   color: $black;
-  font-family: 'Passion One', sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $white;
 }

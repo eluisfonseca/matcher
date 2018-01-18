@@ -6,10 +6,12 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { PlayersService } from './services/players.service';
 import { MatchesService } from './services/matches.service';
+import { LatestGamesComponent } from './components/latest-games/latest-games.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LatestGamesComponent
   ],
   imports: [
     BrowserModule,

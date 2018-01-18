@@ -14,4 +14,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running json-server with matcher mock data
 
-Run `json-server --watch src/assets/data/matcher.db.json`
+Run `json-server --watch src/assets/data/matcher.db.json`.

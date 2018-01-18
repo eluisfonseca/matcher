@@ -1,0 +1,42 @@
+latest-games {
+  .match-item-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    text-align: center;
+
+    > div {
+      height: 100%;
+    }
+
+    .score {
+      align-self: center;
+      font-size: 40px;
+      font-family: 'Passion One', sans-serif;
+    }
+  }
+
+  .team-info {
+    &:first-of-type {
+      .team {
+        margin-right: 7px;
+      }
+    }
+
+    &:last-of-type {
+      .team {
+        margin-left: 7px;
+      }
+    }
+
+    .team {
+      font-family: 'Passion One', sans-serif;
+      font-weight: 700;
+      font-size: 50px;
+    }
+
+    .sum {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+    }
+  }
+}

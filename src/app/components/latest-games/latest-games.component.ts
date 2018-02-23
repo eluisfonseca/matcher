@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatchesService } from '../../services/matches.service';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Match } from '../../structs';
 import {ViewEncapsulation} from '@angular/core';
@@ -14,7 +15,7 @@ export class LatestGamesComponent implements OnInit, OnDestroy {
   private matchList: Match[];
   private matchesSubscription: Subscription;
 
-  constructor(private _matchesService: MatchesService) {
+  constructor(private _matchesService: MatchesService, private _router: Router) {
     this.matchesSubscription = this._matchesService.getMatches().subscribe(
       res => {
         this.matchList = res;
@@ -24,6 +25,10 @@ export class LatestGamesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+  }
+
+  createMatch() {
+    this._router.navigate(['/matcher']);
   }
 
   ngOnDestroy() {

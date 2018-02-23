@@ -5,3 +5,10 @@
     height: 100vh;
   }
 }
+
+.home-button {
+  position: fixed;
+  z-index: 2;
+  bottom: 15px;
+  left: 15px;
+}

@@ -1,0 +1,20 @@
+<div class="row full-height">
+  <div class="col s6">
+    <div class="col s10 offset-s1">
+      <h1>
+        Players
+        <button type="button" (click)="createPlayer()" class="btn-floating waves-light grey darken-3"><i class="material-icons">add</i></button>
+      </h1>
+      <ul>
+        <li *ngFor="let player of playerList">
+          {{player.firstName + ' ' + player.lastName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col s6 bg-secondary">
+    <div class="col s10 offset-s1">
+      <latest-games></latest-games>
+    </div>
+  </div>
+</div>

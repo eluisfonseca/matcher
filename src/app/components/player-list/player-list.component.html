@@ -1,0 +1,29 @@
+<h1>
+  Players
+  <button type="button" (click)="createPlayer()" class="btn-floating waves-light grey darken-3"><i class="material-icons">add</i></button>
+</h1>
+<ul>
+  <li *ngFor="let player of playerList">
+    <a routerLink="/edit/{{ player.id }}">
+      <div class="player-entry col s12">
+        <div class="col s10">
+          <div class="player-name">
+            <h5 class="color-black">{{ player.firstName + ' ' + player.lastName }}</h5>
+          </div>
+          <div class="player-agg">
+              <p class="color-white">
+                <span>Def: {{ player.getAggregates().defence }}</span>
+                <span>Off: {{ player.getAggregates().offense }}</span>
+                <span>GK: {{ player.getAggregates().goalkeeping }}</span>
+                <span>Sk: {{ player.getAggregates().skill }}</span>
+                <span>Phy: {{ player.getAggregates().physique }}</span>
+              </p>
+          </div>
+        </div>
+        <div class="col s2 player-score">
+          <h3>{{player.getScore()}}</h3>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

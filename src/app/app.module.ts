@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
 import { AppRouting } from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { PlayersService } from './services/players.service';
@@ -12,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { PlayerProfileComponent } from './components/player-profile/player-profile.component';
 import { PlayerEditorComponent } from './components/player-editor/player-editor.component';
 import { MatchEditorComponent } from './components/match-editor/match-editor.component';
+import { PlayerListComponent } from './components/player-list/player-list.component';
+import { MatcherModalComponent } from './components/matcher-modal/matcher-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { MatchEditorComponent } from './components/match-editor/match-editor.com
     HomeComponent,
     PlayerProfileComponent,
     PlayerEditorComponent,
-    MatchEditorComponent
+    MatchEditorComponent,
+    PlayerListComponent,
+    MatcherModalComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     HttpModule,
-    AppRouting
+    AppRouting,
+    BrowserAnimationsModule
   ],
   providers: [PlayersService, MatchesService],
   bootstrap: [AppComponent]

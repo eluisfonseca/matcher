@@ -1,8 +1,18 @@
+@import '../../../assets/styles/variables';
+
 latest-games {
+  h1 {
+    margin: 2.1rem 30px 1.68rem 30px;
+  }
+
   .match-item-container {
-    font-family: 'Roboto', sans-serif;
     display: flex;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
+
+    &:hover {
+      background: $primary;
+    }
 
     > div {
       height: 100%;
@@ -10,8 +20,8 @@ latest-games {
 
     .score {
       align-self: center;
-      font-size: 40px;
       font-family: 'Passion One', sans-serif;
+      font-size: 40px;
     }
   }
 
@@ -30,8 +40,8 @@ latest-games {
 
     .team {
       font-family: 'Passion One', sans-serif;
-      font-weight: 700;
       font-size: 50px;
+      font-weight: 700;
     }
 
     .sum {

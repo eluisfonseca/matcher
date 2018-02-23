@@ -1,5 +1,5 @@
-<h1>Matches <button type="button" (click)="createMatch()" class="btn-floating waves-light grey darken-3"><i class="material-icons">add</i></button></h1>
-<div class="col s12">
+<h1>Matches <button type="button" (click)="toggleMatchCreator()" class="btn-floating waves-light grey darken-3"><i class="material-icons">add</i></button></h1>
+<div>
   <ul>
       <li *ngFor="let match of matchList">
         <div class="match-item-container">
@@ -17,3 +17,4 @@
       </li>
     </ul>
 </div>
+<matcher-modal [@createMatchAnimation]="createMatchState"></matcher-modal>

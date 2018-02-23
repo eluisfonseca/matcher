@@ -81,7 +81,7 @@
   ],
   "players": [
     {
-      " id": "1",
+      "id": "1",
       "firstName": "John",
       "lastName": "Rambo",
       "stats": {
@@ -99,7 +99,7 @@
       }
     },
     {
-      " id": "2",
+      "id": "2",
       "firstName": "Michael",
       "lastName": "Knight",
       "stats": {
@@ -117,7 +117,7 @@
       }
     },
     {
-      " id": "3",
+      "id": "3",
       "firstName": "John",
       "lastName": "Hannibal Smith",
       "stats": {
@@ -135,7 +135,7 @@
       }
     },
     {
-      " id": "4",
+      "id": "4",
       "firstName": "Templeton",
       "lastName": "Peck",
       "stats": {
@@ -153,7 +153,7 @@
       }
     },
     {
-      " id": "5",
+      "id": "5",
       "firstName": "H.M.",
       "lastName": "Murdock",
       "stats": {
@@ -171,7 +171,7 @@
       }
     },
     {
-      " id": "6",
+      "id": "6",
       "firstName": "Bosco",
       "lastName": "Baracus",
       "stats": {

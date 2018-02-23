@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables';
+
+h1 {
+  margin: 2.1rem 30px 1.68rem 30px;
+}
+
+.player-entry {
+  align-items: center;
+  display: flex;
+  padding: 20px 30px;
+
+  &:hover {
+    background: $secondary;
+  }
+
+  .player-agg {
+    p {
+      font-size: 11px;
+      margin: 0;
+    }
+  }
+  
+  .player-score {
+    h3 {
+      margin: 0;
+    }
+  }
+}

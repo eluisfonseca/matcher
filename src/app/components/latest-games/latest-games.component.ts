@@ -55,6 +55,11 @@ export class LatestGamesComponent implements OnInit, OnDestroy {
     console.log(this.createMatchState);
   }
 
+  closeMatchCreator() {
+    this.createMatchState = 'out';
+    console.log('hello');
+  }
+
   createMatch() {
     this._router.navigate(['/matcher']);
   }

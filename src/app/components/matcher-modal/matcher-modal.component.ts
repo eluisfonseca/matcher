@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { log } from 'util';
 
 @Component({
   selector: 'matcher-modal',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matcher-modal.component.scss']
 })
 export class MatcherModalComponent implements OnInit {
+  @Output() closing = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  closeModal() {
+    console.log('sf');
+    this.closing.emit();
+  }
 }

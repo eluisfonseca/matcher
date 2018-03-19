@@ -40,8 +40,6 @@ export class PlayerListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const a = new Player('sd', 'asdad', 'asdasd', 1, 2, 3, 4, 7, 3, 5);
-    console.log(a.getAggregates());
   }
 
   createPlayer() {

@@ -1,24 +1,45 @@
 <div class="matcher-modal-container">
-  <div class="matcher-modal-content-container">
-    <button type="button" (click)="closeModal()" class="btn-floating waves-light grey darken-3"><i class="material-icons">add</i></button>
-    <div class="player-list-container col s5">
-      <ul>
-        <li *ngFor="let player of playerList">
-            <div class="player-entry col s12">
+  <div class="matcher-modal-content-container bg-paleblue">
+    <button type="button" (click)="closeModal()" class="btn-floating waves-light grey darken-3 close-modal-button"><i class="material-icons">close</i></button>
+    <div class="row">
+      <div class="list-container bg-white col s5">
+        <ul>
+          <li *ngFor="let player of playerList">
+            <div class="player-entry col s12" (click)="addPlayer(player)" [ngClass]="{'disabled': player.selected}">
               <div class="col s10">
                 <div class="player-name">
                   <h5 class="color-black">{{ player.firstName + ' ' + player.lastName }}</h5>
                 </div>
               </div>
               <div class="col s2 player-score">
-                <h3>{{player.getScore()}}</h3>
+                <h3 class="color-black">{{player.getScore()}}</h3>
               </div>
             </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="list-container bg-white col s5 offset-s2">
+        <div *ngIf="selectedPlayers.length != 0; else emptySelection">
+          <ul>
+            <li *ngFor="let player of selectedPlayers; let i = index">
+              <div class="player-entry col s12" (click)="removePlayer(i)">
+                <div class="col s10">
+                  <div class="player-name">
+                    <h5 class="color-black">{{ player.firstName + ' ' + player.lastName }}</h5>
+                  </div>
+                </div>
+                <div class="col s2 player-score">
+                  <h3 class="color-black">{{player.getScore()}}</h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ng-template #emptySelection>
+          <h6 class="color-black center-text emptySelectionText">No players selected</h6>
+        </ng-template>
+      </div>
     </div>
-    <div class="selected-players-container col s5 offset-s2">
-      <p>xfdfxf</p>
-    </div>
+    <button type="button" (click)="generateMatch()" class="btn waves-light">Match!</button>
   </div>
 </div>

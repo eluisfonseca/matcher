@@ -41,6 +41,44 @@ export class Player {
   }
 }
 
+export class PlayerToMatch extends Player {
+  selected: boolean;
+
+  constructor(
+    id: string,
+    firstName: string,
+    lastName: string,
+    pass?: number,
+    marking?: number,
+    handling?: number,
+    shot?: number,
+    speed?: number,
+    endurance?: number,
+    strength?: number,
+    vision?: number,
+    gk?: number,
+    tackle?: number,
+    focus?: number) {
+      super(
+        id,
+        firstName,
+        lastName,
+        pass,
+        marking,
+        handling,
+        shot,
+        speed,
+        endurance,
+        strength,
+        vision,
+        gk,
+        tackle,
+        focus
+      );
+      this.selected = false;
+  }
+}
+
 export class PlayerStats {
   pass: number;
   marking: number;

@@ -2,7 +2,8 @@ import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/cor
 import { log } from 'util';
 import { PlayersService } from '../../services/players.service';
 import { Subscription } from 'rxjs/Subscription';
-import { Player } from '../../structs';
+import { Player, PlayerToMatch } from '../../structs';
+import { timeout } from 'q';
 
 @Component({
   selector: 'matcher-modal',
@@ -12,13 +13,14 @@ import { Player } from '../../structs';
 
 export class MatcherModalComponent implements OnInit, OnDestroy {
   @Output() closing = new EventEmitter();
-  private playerList: Player[];
-  private selectedPlayers: Player[];
+  private playerList: PlayerToMatch[];
+  private selectedPlayers: PlayerToMatch[];
   private playerSubscription: Subscription;
+  private matching: boolean;
 
   constructor(private _playersService: PlayersService) {
     this.playerSubscription = this._playersService.getPlayers().map(
-      res => res.map(x => new Player(
+      res => res.map(x => new PlayerToMatch(
         x.id,
         x.firstName,
         x.lastName,
@@ -43,10 +45,39 @@ export class MatcherModalComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.selectedPlayers = [];
+    this.matching = false;
   }
 
   closeModal() {
     this.closing.emit();
+  }
+
+  addPlayer(player: PlayerToMatch) {
+    if (!player.selected) {
+      this.selectedPlayers.push(player);
+      const found = this.playerList.find(function(element) {
+        return element.id === player.id;
+      });
+      found.selected = true;
+      console.log('here', found);
+    }
+  }
+
+  removePlayer(playerPosition: number) {
+    console.log('remove', playerPosition);
+    const removedPlayer = this.selectedPlayers[playerPosition];
+    const rosterPlayer = this.playerList.find(function(element) {
+      return element.id === removedPlayer.id;
+    });
+    rosterPlayer.selected = false;
+    this.selectedPlayers.splice(playerPosition, 1);
+  }
+
+  generateMatch() {
+    this.matching = true;
+    setTimeout(() => {
+      this.matching = false;
+    }, 3000);
   }
 
   ngOnDestroy() {

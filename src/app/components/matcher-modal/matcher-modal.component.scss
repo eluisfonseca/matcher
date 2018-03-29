@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables';
+
 .matcher-modal-container {
   position: fixed;
   height: 100vh;
@@ -12,14 +14,38 @@
 
   .matcher-modal-content-container {
     padding: 50px;
-    background: burlywood;
     width: 80%;
     max-height: 640px;
     max-width: 1024px;
+    position: relative;
 
-    .player-list-container {
+    .close-modal-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .list-container {
       height: 400px;
       overflow-y: auto;
+
+      .emptySelectionText {
+        margin: 192px auto;
+      }
+
+      li > div {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &.disabled {
+          cursor: not-allowed;
+          
+          h3, h5 {
+            color: $gray;
+          }
+        }
+      }
     }
   }
 }
